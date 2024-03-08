@@ -1,18 +1,16 @@
-const express = require('express');
-const cors = require('cors');
-const app = express();
+import app from "./app.js";
+import { PORT } from "./config.js";
+import { connectDB } from "./db.js";
 
-require('./database');
+async function main() {
+  try {
+    await connectDB();
+    app.listen(PORT);
+    console.log(`Listening on port http://localhost:${PORT}`);
+    console.log(`Environment: ${process.env.NODE_ENV}`)
+  } catch (error) {
+    console.error(error);
+  }
+}
 
-// settings
-app.set('port', process.env.PORT || 4000)
-
-// middlewares
-app.use(express.json());
-app.use(cors());
-
-// routes
-app.use('/api', require('./routes/index'));
-
-app.listen(app.get('port'));
-console.log('Server on port', app.get('port'));
+main();
