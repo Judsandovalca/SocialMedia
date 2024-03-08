@@ -1,6 +1,9 @@
 const mongoose = require('mongoose');
+const dotenv= require('dotenv');
 
-mongoose.connect('mongodb://localhost/angular-auth', {
+dotenv.config();
+
+mongoose.connect(process.env.MONGO, {
     useNewUrlParser: true,
     useUnifiedTopology: true
 })
