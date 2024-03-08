@@ -7,6 +7,10 @@ const userSchema = new mongoose.Schema(
       required: true,
       trim: true,
     },
+    age: {
+      type: Number,
+      required: true,
+    },
     email: {
       type: String,
       required: true,
@@ -15,6 +19,11 @@ const userSchema = new mongoose.Schema(
     password: {
       type: String,
       required: true,
+    },
+    post: {
+      type: mongoose.Types.ObjectId,
+      ref: "Post",
+      default: null
     },
   },
   {

@@ -1,0 +1,85 @@
+
+/* Login Component Styles */
+.form-group {
+  display: flex;
+  align-items: center;
+}
+
+.form-group label {
+  width: 150px; /* Establece el ancho deseado para las etiquetas */
+  text-align: left; /* Alinea el texto a la derecha */
+  margin-right: 10px; /* Espacio entre la etiqueta y el campo de entrada */
+}
+
+.form-group input {
+  flex: 1; /* Permite que el campo de entrada ocupe todo el espacio restante */
+}
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f0f2f5; /* Light background for better contrast */
+  padding: 20px; /* Add some padding for visual breathing room */
+}
+
+.login-form {
+  width: 400px;
+  padding: 30px; /* Increase padding for a more spacious form */
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle drop shadow for depth */
+  background-color: #fff; /* White background for clear input fields */
+}
+
+.login-form h1 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 24px; /* Increase title size for emphasis */
+  font-weight: bold; /* Make title bolder */
+  color: #333; /* Darker text color for better readability */
+}
+
+.login-form .form-group {
+  margin-bottom: 15px; /* Adjust spacing between groups */
+}
+
+.login-form .form-control {
+  padding: 12px 20px; /* Adjust padding for better user input experience */
+  border: 1px solid #ccc;
+  border-radius: 3px; /* Slightly rounded corners */
+  box-sizing: border-box; /* Ensure full width within container */
+}
+
+.login-form .form-control:focus {
+  border-color: #80bdff; /* Blue border highlight on focus */
+  outline: none; /* Remove default browser outline */
+}
+
+.login-form .btn-primary {
+  background-color: #007bff;
+  border-color: #007bff;
+  width: 100%;
+  padding: 10px 20px; /* Adjust button padding */
+  border-radius: 3px; /* Consistent rounded corners */
+  color: #fff; /* White text for better contrast */
+  font-weight: bold; /* Emphasize button text */
+  cursor: pointer; /* Indicate clickable action */
+}
+
+.login-form .btn-primary:hover {
+  background-color: #0069d9; /* Slight color change on hover */
+  transition: background-color 0.2s ease-in-out; /* Smooth transition effect */
+}
+
+.login-form .alert {
+  margin-top: 10px;
+  padding: 10px; /* Add some padding to the alert message */
+  border-radius: 3px; /* Rounded corners for a softer look */
+}
+
+.login-form .alert-danger {
+  background-color: #f8d7da; /* Light red for error messages */
+  border-color: #e4b9c7; /* Red border for error messages */
+  color: #721c24; /* Darker red text for better readability */
+}
