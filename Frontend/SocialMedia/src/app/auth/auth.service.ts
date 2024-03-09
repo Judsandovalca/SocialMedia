@@ -13,6 +13,9 @@ export class AuthService {
   login(data: any): Observable<any> {
     return this.http.post('http://localhost:4000/api/auth/login', data);
   }
+  register(data: any): Observable<any> {
+    return this.http.post('http://localhost:4000/api/auth/register', data);
+  }
 
   setToken(token: string) {
     document.cookie = `token=${token};path=/`;
