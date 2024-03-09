@@ -26,14 +26,6 @@ located at the `config/config.ts` file:
 const MONGO_URL = `mongodb+srv://${MONGO_USERNAME}:${MONGO_PASSWORD}@<your_cluster_name>.<your_cluster_provider>.mongodb.net/db`;
 ```
 
-### ./FrontEnd
-
-To run this project, you will need to add the following environment variables to your `.env.development` file inside the `./client` folder
-
--   `VITE_BACKEND_URL` - Url to connect the backend (usually is [http://localhost:8000](http://localhost:8000))
--
--   `VITE_PRORUCTS_URL` - Url to connect the fake products api [https://fakestoreapi.com/products](https://fakestoreapi.com/products)
-
 ## Setup
 
 ### Backend
