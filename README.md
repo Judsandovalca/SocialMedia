@@ -7,7 +7,7 @@ Made using with Node v20.11.1
 
 ## Environment Variables
 
-### ./server
+### ./BackEnd
 
 To run this project, you will need to add the following environment variables to your .env file inside the backend folder, use the template as example
 
@@ -26,7 +26,7 @@ located at the `config/config.ts` file:
 const MONGO_URL = `mongodb+srv://${MONGO_USERNAME}:${MONGO_PASSWORD}@<your_cluster_name>.<your_cluster_provider>.mongodb.net/db`;
 ```
 
-### ./client
+### ./FrontEnd
 
 To run this project, you will need to add the following environment variables to your `.env.development` file inside the `./client` folder
 
