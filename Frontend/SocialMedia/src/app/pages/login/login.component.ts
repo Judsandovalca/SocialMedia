@@ -3,7 +3,6 @@ import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { AuthService } from '../../auth/auth.service';
 import { Router } from '@angular/router';
 
-
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
@@ -38,17 +37,18 @@ export class LoginComponent implements OnInit {
     this.router.navigate(['/register']);
   }
   onSubmit() {
-    if (this.loginForm.valid) {
+
       this.authService.login(this.loginForm.value)
 
         .subscribe(
           response => {
             this.authService.setToken(response.token);
             this.router.navigate(['/home']);
+
           },
           error => this.errorMessage = error
         );
-    }
+
   }
 
 }
