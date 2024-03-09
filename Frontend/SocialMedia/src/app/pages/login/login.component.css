@@ -66,6 +66,17 @@
   font-weight: bold; /* Emphasize button text */
   cursor: pointer; /* Indicate clickable action */
 }
+.login-form .btn-secundary {
+  background-color: #5500ff;
+  border-color: #5500ff;
+  width: 100%;
+  padding: 10px 20px; /* Adjust button padding */
+  border-radius: 3px; /* Consistent rounded corners */
+  color: #fff; /* White text for better contrast */
+  font-weight: bold; /* Emphasize button text */
+  cursor: pointer; /* Indicate clickable action */
+}
+
 
 .login-form .btn-primary:hover {
   background-color: #0069d9; /* Slight color change on hover */

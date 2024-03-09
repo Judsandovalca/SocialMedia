@@ -34,6 +34,11 @@ export class LoginComponent implements OnInit {
       password: ['', [Validators.required, Validators.minLength(6)]]
     });
   }
+  onRegisterClick() {
+    // ... acción antes de navegar
+    // Ejemplo: mostrar un modal de confirmación
+    this.router.navigate(['/register']);
+  }
 
   onSubmit() {
     if (this.loginForm.valid) {

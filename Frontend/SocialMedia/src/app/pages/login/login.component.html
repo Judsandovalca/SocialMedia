@@ -14,10 +14,12 @@
         <input type="password" formControlName="password" id="password" class="form-control">
       </div>
 
-      <button type="submit" class="btn btn-primary">Iniciar sesión</button>
-
+      <button type="submit" class="btn btn-primary"  >Iniciar sesión</button>
+      <p> Es tu primera vez aca?</p>
+      <button type="button" class="btn btn-secundary" (click)="onRegisterClick()">Crear cuenta</button>
       <div *ngIf="errorMessage" class="alert alert-danger">{{ errorMessage }}</div>
 
     </form>
+
   </div>
 </div>
