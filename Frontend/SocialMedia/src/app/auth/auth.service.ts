@@ -5,12 +5,13 @@ import { Observable } from 'rxjs';
 @Injectable({
   providedIn: 'root'
 })
+
 export class AuthService {
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient ) { }
 
   login(data: any): Observable<any> {
-    return this.http.post('/api/login', data);
+    return this.http.post('http://localhost:4000/api/auth/login', data);
   }
 
   setToken(token: string) {
