@@ -2,10 +2,9 @@ import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { AuthService } from '../../auth/auth.service';
 import { Router } from '@angular/router';
-import { MatFormFieldModule } from '@angular/material/form-field';
-import { MatInputModule } from '@angular/material/input';
-import { MatButtonModule } from '@angular/material/button';
+import { HttpClient } from '@angular/common/http';
 
+const API_URL = 'http://localhost:4000/api/auth/login'
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
@@ -17,6 +16,7 @@ export class LoginComponent implements OnInit {
   errorMessage: string;
 
   constructor(
+    private http:  HttpClient,
     private fb: FormBuilder,
     private authService: AuthService,
     private router: Router
@@ -37,14 +37,27 @@ export class LoginComponent implements OnInit {
 
   onSubmit() {
     if (this.loginForm.valid) {
-      this.authService.login(this.loginForm.value)
+      this.http.post(API_URL,this.loginForm.value).subscribe(
+        (response) => {
+          // Manejar la respuesta exitosa
+          //this.authService.setToken(response.token);
+            this.router.navigate(['/home']);
+          console.log('Login exitoso:', response);
+        },
+        (error) => {
+          // Manejar el error
+          console.log('Error al iniciar sesión:', error);
+        }
+        )
+      /*this.authService.login(this.loginForm.value)
+
         .subscribe(
           response => {
             this.authService.setToken(response.token);
             this.router.navigate(['/home']);
           },
           error => this.errorMessage = error
-        );
+        );*/
     }
   }
 
