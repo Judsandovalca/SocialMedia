@@ -12,13 +12,17 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
 import { RegisterComponent } from './pages/register/register.component';
+import { UserInfoComponent } from './pages/user-info/user-info.component';
+import { EditUserComponent } from './pages/edit-user/edit-user.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
     HomeComponent,
-    RegisterComponent
+    RegisterComponent,
+    UserInfoComponent,
+    EditUserComponent
   ],
   imports: [
     BrowserModule,
